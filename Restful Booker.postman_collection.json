@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "65a71890-8ca0-47de-892f-9f0b02c011ab",
+		"name": "Restful Booker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:81.0) Gecko/20100101 Firefox/81.0"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-GB,en;q=0.5"
+					},
+					{
+						"key": "Referer",
+						"value": "https://aw1.automationintesting.online/"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "__cfduid=dbddeb2bfdbe50d9869797e3e51ff4fc21603535413; banner=true; token=J0As2eHQMxdsPoG9"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"password\",\n    \"username\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "https://aw1.automationintesting.online/auth/login",
+					"protocol": "https",
+					"host": [
+						"aw1",
+						"automationintesting",
+						"online"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Branding",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:81.0) Gecko/20100101 Firefox/81.0"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-GB,en;q=0.5"
+					},
+					{
+						"key": "Referer",
+						"value": "https://aw1.automationintesting.online/"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "__cfduid=dbddeb2bfdbe50d9869797e3e51ff4fc21603535413; banner=true; token=J0As2eHQMxdsPoG9"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "TE",
+						"value": "Trailers"
+					}
+				],
+				"url": {
+					"raw": "https://aw1.automationintesting.online/branding/",
+					"protocol": "https",
+					"host": [
+						"aw1",
+						"automationintesting",
+						"online"
+					],
+					"path": [
+						"branding",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Room",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:81.0) Gecko/20100101 Firefox/81.0"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-GB,en;q=0.5"
+					},
+					{
+						"key": "Referer",
+						"value": "https://aw1.automationintesting.online/"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cookie",
+						"value": "__cfduid=dbddeb2bfdbe50d9869797e3e51ff4fc21603535413; banner=true; token=J0As2eHQMxdsPoG9"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "TE",
+						"value": "Trailers"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"roomid\": 1,\n            \"roomNumber\": 101,\n            \"type\": \"Single\",\n            \"accessible\": true,\n            \"image\": \"https://www.mwtestconsultancy.co.uk/img/testim/room2.jpg\",\n            \"description\": \"Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.\",\n            \"features\": [\n                \"TV\",\n                \"WiFi\",\n                \"Safe\"\n            ],\n            \"roomPrice\": 100\n}\n"
+				},
+				"url": {
+					"raw": "https://aw1.automationintesting.online/room/",
+					"protocol": "https",
+					"host": [
+						"aw1",
+						"automationintesting",
+						"online"
+					],
+					"path": [
+						"room",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
