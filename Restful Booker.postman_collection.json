@@ -123,6 +123,20 @@
 		},
 		{
 			"name": "Create Room",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d37e274d-70d4-464c-86ee-6370adfcc106",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -168,12 +182,9 @@
 					"raw": "{\n            \"roomid\": 1,\n            \"roomNumber\": 101,\n            \"type\": \"Single\",\n            \"accessible\": true,\n            \"image\": \"https://www.mwtestconsultancy.co.uk/img/testim/room2.jpg\",\n            \"description\": \"Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.\",\n            \"features\": [\n                \"TV\",\n                \"WiFi\",\n                \"Safe\"\n            ],\n            \"roomPrice\": 100\n}\n"
 				},
 				"url": {
-					"raw": "https://aw1.automationintesting.online/room/",
-					"protocol": "https",
+					"raw": "{{rb_url}}/room/",
 					"host": [
-						"aw1",
-						"automationintesting",
-						"online"
+						"{{rb_url}}"
 					],
 					"path": [
 						"room",
